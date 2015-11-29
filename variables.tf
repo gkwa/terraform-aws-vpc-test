@@ -1,3 +1,4 @@
 variable "region" {
-	default = "us-west-1"
+  description = "AWS region to launch servers."
+  default = "us-west-1"
 }

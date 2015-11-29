@@ -1,0 +1,15 @@
+terraform-aws-vpc-test
+
+* Usage
+#+BEGIN_SRC
+terraform get -update
+terraform apply -var-file=~/.ssh/terraform.tfvars
+terraform show -module-depth=1
+terraform destroy -force -var-file=~/.ssh/terraform.tfvars
+#+END_SRC
+
+* Check for cycles
+
+#+BEGIN_SRC
+terraform graph -draw-cycles -verbose >o.dot; dot o.dot -Tpng >o.png; open o.png
+#+END_SRC

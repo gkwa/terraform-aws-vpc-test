@@ -2,10 +2,10 @@ provider "aws" {
   region = "${var.region}"
 }
 
-module "vpc1" {
+module "vpc" {
   source = "github.com/terraform-community-modules/tf_aws_vpc"
 
-  name = "my-vpc1"
+  name = "taylor-ephemeral"
 
   cidr = "10.0.0.0/16"
   private_subnets = "10.0.1.0/24,10.0.2.0/24,10.0.3.0/24"

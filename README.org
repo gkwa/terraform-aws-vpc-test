@@ -34,6 +34,6 @@ Using =-state= param might help: use one state file per region
 More
 + https://groups.google.com/d/msg/terraform-tool/pS5KqBvN4EQ/YUK4DMcAeIUJ
 #+BEGIN_SRC
-terraform apply -var-file stage.tfvars -state stage.tfstate
-terraform apply -var-file prod.tfvars -state prod.tfstate
+terraform apply -var-file=~/.ssh/terraform.tfvars -var region=eu-west-1 -state=eu-west-1.tfstate
+terraform apply -var-file=~/.ssh/terraform.tfvars -var region=us-west-1 -state=us-west-1.tfstate
 #+END_SRC
